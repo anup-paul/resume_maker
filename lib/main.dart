@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pdf_generate/pages/content/wr_skils_content.dart';
 import 'package:pdf_generate/pages/dragon_ball_resume_ui_screen.dart';
+import 'package:pdf_generate/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
                 useMaterial3: true,
               ),
-              home: const WolfsRainScreen());
+              home: const HomePage());
         });
   }
 }

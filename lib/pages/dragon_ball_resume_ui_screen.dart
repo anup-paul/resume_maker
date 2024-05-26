@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pdf_generate/pages/pdf_view/pdf_view.dart';
 
 import 'content/designation_content.dart';
 import 'content/education.dart';
@@ -18,9 +19,6 @@ class WolfsRainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar: AppBar(
-        title: const Text('WolfRain Cv Template'),
-      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -31,7 +29,7 @@ class WolfsRainScreen extends StatelessWidget {
                 Expanded(
                   flex: 4,
                   child: Container(
-                    color: const Color(0xff333646),
+                    color: Colors.blueGrey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -78,10 +76,12 @@ class WolfsRainScreen extends StatelessWidget {
       ),
       floatingActionButtonLocation:FloatingActionButtonLocation.endFloat ,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blueAccent,
-        onPressed: () {
-          //NavUtil.navigateScreen(context, const WolfsRainPdfView());
-        },child: const Icon(Icons.picture_as_pdf,color: Colors.white,),),
+        backgroundColor:  Colors.blueGrey,
+        onPressed: (){
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const WolfsRainPdfView())
+          );},child: const Icon(Icons.picture_as_pdf,color: Colors.white,),),
     );
   }
 }
