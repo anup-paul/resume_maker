@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pdf_generate/pages/pdf_view/pdf_view.dart';
+import 'package:pdf_generate/pages/pdf_view/dragon_ball_pdf_view.dart';
 
 import 'content/designation_content.dart';
 import 'content/education.dart';
